@@ -87,7 +87,7 @@ if (filter_has_var(INPUT_POST, "submit")) {
         <a href="#services" class="navbarLink">Services</a>
       </div>
       <div class="navbarItem" onclick="handleHamburgerMenu()">
-        <a href="/contact.html" class="navbarLink">Contact</a>
+        <a href="./contact.php" class="navbarLink">Contact</a>
       </div>
     </div>
   </nav>
@@ -154,7 +154,7 @@ if (filter_has_var(INPUT_POST, "submit")) {
             Models to personalize: Casa Cor's proposal and the dream of the
             <span>mobile home</span>.
           </div>
-          <a href="/contact.html" class="button">Learn more</a>
+          <a href="./contact.php" class="button">Learn more</a>
         </div>
         <div class="card newsTwo">
           <div class="image"></div>
@@ -162,14 +162,14 @@ if (filter_has_var(INPUT_POST, "submit")) {
             Tom Dixon: "I am <span>always dissatisfied</span> with my previous
             designs"
           </div>
-          <a href="/contact.html" class="button">Learn more</a>
+          <a href="./contact.php" class="button">Learn more</a>
         </div>
         <div class="card newsThree">
           <div class="image"></div>
           <div class="message">
             Danish style or the design route in Copenhagen
           </div>
-          <a href="/contact.html" class="button">Learn more</a>
+          <a href="./contact.php" class="button">Learn more</a>
         </div>
       </div>
     </div>
@@ -295,9 +295,9 @@ if (filter_has_var(INPUT_POST, "submit")) {
         <a href="#home">Home</a>
         <a href="#services">Our services</a>
         <a href="#about">About us</a>
-        <a href="/contact.html">Contact us</a>
-        <a href="/terms_conditions.html">Terms and conditions</a>
-        <a href="/privacy_policy.html">Privacy policy</a>
+        <a href="./contact.php">Contact us</a>
+        <a href="./terms_conditions.php">Terms and conditions</a>
+        <a href="./privacy_policy.php">Privacy policy</a>
       </div>
       <div class="extraLinks"></div>
     </div>

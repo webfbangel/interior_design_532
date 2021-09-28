@@ -76,16 +76,16 @@ if (filter_has_var(INPUT_POST, "submit")) {
     </div>
     <div class="navbarItems">
       <div class="navbarItem" onclick="handleHamburgerMenu()">
-        <a href="/#home" class="navbarLink">Home</a>
+        <a href="./#home" class="navbarLink">Home</a>
       </div>
       <div class="navbarItem" onclick="handleHamburgerMenu()">
-        <a href="/#about" class="navbarLink">About us</a>
+        <a href="./#about" class="navbarLink">About us</a>
       </div>
       <div class="navbarItem" onclick="handleHamburgerMenu()">
-        <a href="/#services" class="navbarLink">Services</a>
+        <a href="./#services" class="navbarLink">Services</a>
       </div>
       <div class="navbarItem" onclick="handleHamburgerMenu()">
-        <a href="/contact.html" class="navbarLink">Contact</a>
+        <a href="./contact.php" class="navbarLink">Contact</a>
       </div>
     </div>
   </nav>
@@ -157,12 +157,12 @@ if (filter_has_var(INPUT_POST, "submit")) {
     <div class="sectionWrapper">
       <div class="pageLinks">
         <p>Page links</p>
-        <a href="/#home">Home</a>
-        <a href="/#services">Our services</a>
-        <a href="/#about">About us</a>
-        <a href="/contact.html">Contact us</a>
-        <a href="/terms_conditions.html">Terms and conditions</a>
-        <a href="/privacy_policy.html">Privacy policy</a>
+        <a href="./#home">Home</a>
+        <a href="./#services">Our services</a>
+        <a href="./#about">About us</a>
+        <a href="./contact.php">Contact us</a>
+        <a href="./terms_conditions.php">Terms and conditions</a>
+        <a href="./privacy_policy.php">Privacy policy</a>
       </div>
       <div class="extraLinks"></div>
     </div>
