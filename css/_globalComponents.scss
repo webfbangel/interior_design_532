@@ -1,0 +1,133 @@
+@import "./variables";
+
+nav.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 10px 30px;
+  position: absolute;
+  z-index: 10;
+  width: calc(100vw - 18px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  width: 100%;
+  .hamburgerMenu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .logo {
+    .big {
+      font-family: $fontKaisei;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    .small {
+      text-transform: uppercase;
+      font-family: $fontKaisei;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+    }
+  }
+
+  .navbarItems {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    .navbarItem {
+      padding: 10px 20px;
+
+      &:not(:last-of-type) {
+        margin-left: 10px;
+      }
+      .navbarLink {
+        text-decoration: none;
+        color: $colorBlackish;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav.navbar {
+    grid-template-rows: auto 1fr;
+    .logo {
+      .big {
+      }
+      .small {
+      }
+    }
+
+    .hamburgerMenu {
+      display: block;
+      i.menuClose {
+        display: none;
+      }
+    }
+
+    .navbarItems {
+      display: none;
+      .navbarItem {
+        &:not(:last-of-type) {
+        }
+        .navbarLink {
+        }
+      }
+    }
+
+    &.open {
+      height: 100vh;
+      background-color: $colorWhite;
+      z-index: 1000;
+      .hamburgerMenu {
+        i.menuOpen {
+          display: none;
+        }
+
+        i.menuClose {
+          display: block;
+        }
+      }
+      .navbarItems {
+        align-self: center;
+        justify-self: center;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: unset;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 3rem 0;
+  width: 100%;
+  background-color: $colorBlack;
+  color: $colorWhite;
+  font-weight: 300;
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1vw;
+    display: grid;
+
+    .pageLinks {
+      display: grid;
+      p {
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: $colorWhite;
+        margin-bottom: 0.5rem;
+        transition: color 200ms ease-in-out;
+
+        &:hover {
+          color: $colorGray300;
+        }
+      }
+    }
+  }
+}

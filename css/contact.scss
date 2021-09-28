@@ -1,0 +1,117 @@
+@import "./variables";
+
+.contactSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: $colorBlackish;
+  color: white;
+  font-weight: 300;
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .title {
+      grid-column: 1/-1;
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: $fontPlayfair;
+      margin-bottom: 10px;
+    }
+    .message {
+      grid-column: 1/-1;
+      color: $colorGray500;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .contactInformation {
+      .item {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+          "icon type"
+          "icon description";
+        margin-bottom: 1rem;
+        max-width: 400px;
+
+        .icon {
+          grid-area: icon;
+          display: block;
+          align-self: center;
+          justify-self: center;
+        }
+        .type {
+          grid-area: type;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+        }
+        .description {
+          grid-area: description;
+          font-weight: 300;
+        }
+      }
+    }
+    .contactForm {
+      position: relative;
+      .item {
+        width: clamp(200px, 80%, 450px);
+        display: grid;
+        margin: auto;
+        margin-bottom: 10px;
+        gap: 3px;
+        .label {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+
+        input,
+        textarea {
+          outline: none;
+          border: none;
+          padding: 10px 20px;
+        }
+
+        input {
+          height: 30px;
+          border-radius: 3px;
+        }
+
+        textarea {
+          border-radius: 5px;
+        }
+      }
+      button {
+        position: relative;
+        padding: 7px 40px;
+        left: 75%;
+        border-radius: 5px;
+        background-color: $colorPrimary;
+        color: $colorWhite;
+        transform: translateX(-100%);
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover {
+          background-color: $colorPrimaryDarken;
+        }
+      }
+
+      .submitMessage {
+        width: clamp(200px, 80%, 450px);
+        margin: auto;
+        margin-bottom: 10px;
+
+        .errors {
+          font-size: 0.85rem;
+          color: pink;
+        }
+        .success {
+          font-size: 0.85rem;
+          color: yellow;
+        }
+      }
+    }
+  }
+}

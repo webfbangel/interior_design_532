@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACE,OADK,AAAA,cAAc,CACnB,eAAe,CAAC;EACd,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,cAAc;CAmBxB;;AAvBH,AAMI,OANG,AAAA,cAAc,CACnB,eAAe,CAKb,MAAM,CAAC;EACL,aAAa,EAAE,IAAI;EACnB,KAAK,ECHK,OAAO;CDIlB;;AATL,AAWI,OAXG,AAAA,cAAc,CACnB,eAAe,CAUb,EAAE,CAAC;EACD,aAAa,EAAE,IAAI;EACnB,KAAK,ECRK,OAAO;CDalB;;AAlBL,AAeM,OAfC,AAAA,cAAc,CACnB,eAAe,CAUb,EAAE,AAIC,IAAK,CAAA,cAAc,EAAE;EACpB,UAAU,EAAE,IAAI;CACjB;;AAjBP,AAoBI,OApBG,AAAA,cAAc,CACnB,eAAe,CAmBb,CAAC,CAAC;EACA,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "terms_conditions.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "terms_conditions.css"
+}

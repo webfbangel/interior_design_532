@@ -1,0 +1,755 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700&display=swap");
+div.hero {
+  overflow: hidden;
+  position: relative;
+}
+
+div.hero .slider {
+  max-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+div.hero .slider .slide {
+  min-height: 100vh;
+  width: 100%;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+div.hero .slider .slide.slideOne {
+  background-image: url("https://www.istitutomarangoni.com/marangoni/interior-design-1.jpg");
+}
+
+div.hero .slider .slide.slideTwo {
+  background-image: url("https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/45RW2SDOVZAIXBXOHEIRMGKIEM.jpg");
+}
+
+div.hero .slider .slide.slideThree {
+  background-image: url("https://static.wixstatic.com/media/16ec2d_43ed64fc59724ab1b1eb34d9b80088da~mv2.png");
+}
+
+div.hero .slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+div.hero .slider .slick-arrow::before {
+  color: #2f3542;
+}
+
+div.hero .slider .slick-arrow.slick-next {
+  right: 50px;
+}
+
+div.hero .slider .slick-arrow.slick-prev {
+  left: 50px;
+}
+
+div.hero .slider .slick-dots {
+  position: absolute;
+  bottom: 10px;
+}
+
+div.hero .heroMessage {
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.514);
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+div.hero .heroMessage div {
+  text-align: center;
+  color: #ffffff;
+  max-width: 400px;
+}
+
+div.hero .heroMessage .companyName {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+
+div.hero .heroMessage .location {
+  font-family: "Kaisei HarunoUmi", serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+div.hero .heroMessage .message {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 1.25rem;
+}
+
+.aboutApproachSection {
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.aboutApproachSection .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1vw;
+}
+
+.aboutApproachSection .sectionWrapper .cards {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 6rem;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5rem 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  -ms-flex-item-align: end;
+      align-self: end;
+  font-family: "Kaisei HarunoUmi", serif;
+  letter-spacing: 2px;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card .message {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: message;
+  color: #595959;
+  -ms-flex-item-align: start;
+      align-self: start;
+  font-size: 0.95rem;
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 400;
+  line-height: 1.2rem;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card .imageWrapper {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: image;
+  overflow: hidden;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card .imageWrapper .image {
+  height: 200px;
+  width: 350px;
+  background-image: url("https://www.christianfaithatwork.com/wp-content/uploads/2015/06/mission.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 2000ms ease-in-out;
+  transition: -webkit-transform 2000ms ease-in-out;
+  transition: transform 2000ms ease-in-out;
+  transition: transform 2000ms ease-in-out, -webkit-transform 2000ms ease-in-out;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card.approach {
+  -ms-grid-columns: minmax(200px, 400px) auto;
+      grid-template-columns: minmax(200px, 400px) auto;
+      grid-template-areas: "title image" "message image";
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card.about {
+  -ms-grid-columns: auto minmax(200px, 400px);
+      grid-template-columns: auto minmax(200px, 400px);
+      grid-template-areas: "image title" "image message";
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card.about .title {
+  text-align: right;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card.about .message {
+  text-align: right;
+}
+
+.aboutApproachSection .sectionWrapper .cards .card.about .imageWrapper .image {
+  background-image: url("https://miro.medium.com/max/6300/0*tz88S6qbzWxhITvb.");
+}
+
+.aboutApproachSection .sectionWrapper .cards .card:hover .image {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 700px) {
+  .aboutApproachSection .sectionWrapper .cards .card.approach {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "message" "image";
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .aboutApproachSection .sectionWrapper .cards .card.about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "message" "image";
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+.newsSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: #f1f2f6;
+}
+
+.newsSection .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1vw;
+}
+
+.newsSection .sectionWrapper .title {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.newsSection .sectionWrapper .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.newsSection .sectionWrapper .cards .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.newsSection .sectionWrapper .cards .card.newsOne .image {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4zEQVzvQ9jJWPiHdYWhzjTEcYGQWeFVVQUPO9omBMkKaijkBOIbHO_bRk0_vZMkv6hA&usqp=CAU");
+}
+
+.newsSection .sectionWrapper .cards .card.newsTwo .image {
+  background-image: url("https://images.homify.com/images/a_0,c_fill,f_auto,h_900,q_auto,w_1920/v1470845934/p/photo/image/1617842/project_3/fotos-de-salas-recibidores-de-estilo-asiatico-en-amarillo-de-axis-group-of-interior-design.jpg");
+}
+
+.newsSection .sectionWrapper .cards .card.newsThree .image {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8XDg9wiEDwY4zdZebwV_-Xko3H9pX5MdjkuQ8QB5gIcYScQk3TpC7SlYZADv2orDoj0&usqp=CAU");
+}
+
+.newsSection .sectionWrapper .cards .card .image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 10px solid #595959;
+}
+
+.newsSection .sectionWrapper .cards .card .message {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.newsSection .sectionWrapper .cards .card .message span {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.newsSection .sectionWrapper .cards .card .button {
+  display: inline-block;
+  width: clamp(100px, 100%, 200px);
+  padding: 10px 0;
+  background-color: #2f3542;
+  color: #ffffff;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  text-align: center;
+  font-size: 0.8rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsSection .sectionWrapper .cards .card .button:hover {
+  background-color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .newsSection .sectionWrapper .cards {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    grid-gap: 5rem;
+    justify-items: center;
+  }
+  .newsSection .sectionWrapper .cards .card {
+    max-width: 400px;
+  }
+}
+
+.serviceSection {
+  width: 100%;
+}
+
+.serviceSection .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.serviceSection .sectionWrapper .services {
+  display: -ms-grid;
+  display: grid;
+}
+
+.serviceSection .sectionWrapper .services .service {
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.serviceSection .sectionWrapper .services .service .image {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: 1500ms ease-in-out;
+  transition: 1500ms ease-in-out;
+}
+
+.serviceSection .sectionWrapper .services .service .information {
+  padding: 4rem;
+}
+
+.serviceSection .sectionWrapper .services .service .information .type {
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  margin-bottom: 1.4rem;
+}
+
+.serviceSection .sectionWrapper .services .service .information .description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.serviceSection .sectionWrapper .services .service.serviceOne .image {
+  background-image: url("https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/06/comelite-architecture-structure-and-interior-design-modern-neoclassical-villa-interior-design-private-houses-archello.1596715458.3455.jpg");
+}
+
+.serviceSection .sectionWrapper .services .service.serviceOne:hover .image {
+  background-position: center left;
+}
+
+.serviceSection .sectionWrapper .services .service.serviceTwo .image {
+  background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/Interior-of-modern-hallway-with-mirror-2500x1667.jpeg");
+}
+
+.serviceSection .sectionWrapper .services .service.serviceTwo:hover .image {
+  background-position: center left;
+}
+
+.serviceSection .sectionWrapper .services .service.serviceThree .image {
+  background-image: url("https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/06/comelite-architecture-structure-and-interior-design-modern-neoclassical-villa-interior-design-private-houses-archello.1596715458.3455.jpg");
+}
+
+.serviceSection .sectionWrapper .services .service.serviceThree:hover .image {
+  background-position: center right;
+}
+
+@media screen and (max-width: 700px) {
+  .serviceSection {
+    width: 100%;
+  }
+  .serviceSection .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+  }
+  .serviceSection .sectionWrapper .services {
+    display: -ms-grid;
+    display: grid;
+  }
+  .serviceSection .sectionWrapper .services .service {
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    -ms-grid-rows: 3fr 5fr;
+        grid-template-rows: 3fr 5fr;
+        grid-template-areas: "image" "text";
+  }
+  .serviceSection .sectionWrapper .services .service .image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    -webkit-transition: 1500ms ease-in-out;
+    transition: 1500ms ease-in-out;
+  }
+  .serviceSection .sectionWrapper .services .service .information {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: text;
+    padding: 2rem;
+  }
+  .serviceSection .sectionWrapper .services .service .information .type {
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-bottom: 1.4rem;
+  }
+  .serviceSection .sectionWrapper .services .service .information .description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.contactSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: #2f3542;
+  color: white;
+  font-weight: 300;
+}
+
+.contactSection .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.contactSection .sectionWrapper .title {
+  grid-column: 1/-1;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.contactSection .sectionWrapper .message {
+  grid-column: 1/-1;
+  color: #8c8c8c;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contactSection .sectionWrapper .contactInformation .item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+      grid-template-areas: "icon type" "icon description";
+  margin-bottom: 1rem;
+  max-width: 400px;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .type {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: type;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .description {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: description;
+  font-weight: 300;
+}
+
+.contactSection .sectionWrapper .contactForm {
+  position: relative;
+}
+
+.contactSection .sectionWrapper .contactForm .item {
+  width: clamp(200px, 80%, 450px);
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  margin-bottom: 10px;
+  gap: 3px;
+}
+
+.contactSection .sectionWrapper .contactForm .item .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.contactSection .sectionWrapper .contactForm .item input,
+.contactSection .sectionWrapper .contactForm .item textarea {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+.contactSection .sectionWrapper .contactForm .item input {
+  height: 30px;
+  border-radius: 3px;
+}
+
+.contactSection .sectionWrapper .contactForm .item textarea {
+  border-radius: 5px;
+}
+
+.contactSection .sectionWrapper .contactForm button {
+  position: relative;
+  padding: 7px 40px;
+  left: 75%;
+  border-radius: 5px;
+  background-color: #b33939;
+  color: #ffffff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.contactSection .sectionWrapper .contactForm button:hover {
+  background-color: #7d2727;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage {
+  width: clamp(200px, 80%, 450px);
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage .errors {
+  font-size: 0.85rem;
+  color: pink;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage .success {
+  font-size: 0.85rem;
+  color: yellow;
+}
+
+@media screen and (max-width: 700px) {
+  .contactSection .sectionWrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+nav.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  padding: 10px 30px;
+  position: absolute;
+  z-index: 10;
+  width: calc(100vw - 18px);
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  width: 100%;
+}
+
+nav.navbar .hamburgerMenu {
+  display: none;
+  cursor: pointer;
+}
+
+nav.navbar .logo .big {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+nav.navbar .logo .small {
+  text-transform: uppercase;
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+}
+
+nav.navbar .navbarItems {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+}
+
+nav.navbar .navbarItems .navbarItem {
+  padding: 10px 20px;
+}
+
+nav.navbar .navbarItems .navbarItem:not(:last-of-type) {
+  margin-left: 10px;
+}
+
+nav.navbar .navbarItems .navbarItem .navbarLink {
+  text-decoration: none;
+  color: #2f3542;
+}
+
+@media screen and (max-width: 900px) {
+  nav.navbar {
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+  }
+  nav.navbar .hamburgerMenu {
+    display: block;
+  }
+  nav.navbar .hamburgerMenu i.menuClose {
+    display: none;
+  }
+  nav.navbar .navbarItems {
+    display: none;
+  }
+  nav.navbar.open {
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+  nav.navbar.open .hamburgerMenu i.menuOpen {
+    display: none;
+  }
+  nav.navbar.open .hamburgerMenu i.menuClose {
+    display: block;
+  }
+  nav.navbar.open .navbarItems {
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    justify-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-flow: unset;
+  }
+}
+
+footer {
+  padding: 3rem 0;
+  width: 100%;
+  background-color: #000;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+footer .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1vw;
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .sectionWrapper .pageLinks {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .sectionWrapper .pageLinks p {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer .sectionWrapper .pageLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+footer .sectionWrapper .pageLinks a:hover {
+  color: #bfbfbf;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=global.css.map */

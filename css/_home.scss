@@ -1,0 +1,549 @@
+@import "./variables";
+
+div.hero {
+  overflow: hidden;
+  position: relative;
+  .slider {
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+
+    .slide {
+      min-height: 100vh;
+      width: 100%;
+      transform: scale(1.01);
+
+      &.slideOne {
+        background-image: url("https://www.istitutomarangoni.com/marangoni/interior-design-1.jpg");
+      }
+      &.slideTwo {
+        background-image: url("https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/45RW2SDOVZAIXBXOHEIRMGKIEM.jpg");
+      }
+      &.slideThree {
+        background-image: url("https://static.wixstatic.com/media/16ec2d_43ed64fc59724ab1b1eb34d9b80088da~mv2.png");
+      }
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      transform: scale(2);
+
+      &::before {
+        color: $colorBlackish;
+      }
+      &.slick-next {
+        right: 50px;
+      }
+      &.slick-prev {
+        left: 50px;
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+
+  .heroMessage {
+    margin: auto;
+    position: absolute;
+    bottom: 0px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    div {
+      text-align: center;
+      color: $colorWhite;
+      max-width: 400px;
+    }
+
+    .companyName {
+      font-family: $fontKaisei;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      word-spacing: 5px;
+    }
+    .location {
+      font-family: $fontKaisei;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .message {
+      font-family: $fontKaisei;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+// About approach section
+.aboutApproachSection {
+  padding: 6rem 0;
+  width: 100%;
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1vw;
+    .cards {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 6rem;
+
+      .card {
+        display: grid;
+        grid-gap: 0.5rem 0.5rem;
+        align-items: center;
+        .title {
+          grid-area: title;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          align-self: end;
+          font-family: $fontKaisei;
+          letter-spacing: 2px;
+        }
+        .message {
+          grid-area: message;
+          color: $colorGray700;
+          align-self: start;
+          font-size: 0.95rem;
+          font-family: $fontKaisei;
+          font-size: 400;
+          line-height: 1.2rem;
+        }
+
+        .imageWrapper {
+          grid-area: image;
+          overflow: hidden;
+          .image {
+            height: 200px;
+            width: 350px;
+            background-image: url("https://www.christianfaithatwork.com/wp-content/uploads/2015/06/mission.jpg");
+            background-position: center;
+            background-size: cover;
+            transition: transform 2000ms ease-in-out;
+          }
+        }
+
+        &.approach {
+          grid-template-columns: minmax(200px, 400px) auto;
+          grid-template-areas:
+            "title image"
+            "message image";
+          justify-self: start;
+        }
+
+        &.about {
+          grid-template-columns: auto minmax(200px, 400px);
+          grid-template-areas:
+            "image title"
+            "image message";
+          justify-self: end;
+
+          .title {
+            text-align: right;
+          }
+          .message {
+            text-align: right;
+          }
+
+          .imageWrapper {
+            .image {
+              background-image: url("https://miro.medium.com/max/6300/0*tz88S6qbzWxhITvb.");
+            }
+          }
+        }
+
+        &:hover {
+          .image {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .aboutApproachSection {
+    .sectionWrapper {
+      .cards {
+        .card {
+          &.approach {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "title"
+              "message"
+              "image";
+            justify-self: start;
+          }
+
+          &.about {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "title"
+              "message"
+              "image";
+            justify-self: end;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newsSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: $colorGray100;
+
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1vw;
+    .title {
+      font-weight: 700;
+      font-size: 2rem;
+      font-family: $fontPlayfair;
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      .card {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        justify-items: center;
+        gap: 1rem;
+
+        &.newsOne {
+          .image {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4zEQVzvQ9jJWPiHdYWhzjTEcYGQWeFVVQUPO9omBMkKaijkBOIbHO_bRk0_vZMkv6hA&usqp=CAU");
+          }
+        }
+
+        &.newsTwo {
+          .image {
+            background-image: url("https://images.homify.com/images/a_0,c_fill,f_auto,h_900,q_auto,w_1920/v1470845934/p/photo/image/1617842/project_3/fotos-de-salas-recibidores-de-estilo-asiatico-en-amarillo-de-axis-group-of-interior-design.jpg");
+          }
+        }
+
+        &.newsThree {
+          .image {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8XDg9wiEDwY4zdZebwV_-Xko3H9pX5MdjkuQ8QB5gIcYScQk3TpC7SlYZADv2orDoj0&usqp=CAU");
+          }
+        }
+
+        .image {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+          border: 10px solid $colorGray700;
+        }
+        .message {
+          font-family: $fontPlayfair;
+          text-align: center;
+          align-self: start;
+
+          span {
+            font-family: $fontPlayfair;
+            font-weight: 600;
+          }
+        }
+        .button {
+          display: inline-block;
+          width: clamp(100px, 100%, 200px);
+          padding: 10px 0;
+          background-color: $colorBlackish;
+          color: $colorWhite;
+          align-self: end;
+          text-align: center;
+          font-size: 0.8rem;
+          transition: 200ms ease-in-out;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .newsSection {
+    .sectionWrapper {
+      .cards {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 5rem;
+        justify-items: center;
+        .card {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+.serviceSection {
+  width: 100%;
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+
+    .services {
+      display: grid;
+
+      .service {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .image {
+          width: 100%;
+          height: 100%;
+          background-position: center center;
+          background-size: cover;
+          transition: 1500ms ease-in-out;
+        }
+        .information {
+          padding: 4rem;
+          .type {
+            font-weight: 700;
+            font-size: 2rem;
+            font-family: $fontPlayfair;
+            font-style: italic;
+            margin-bottom: 1.4rem;
+          }
+          .description {
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            font-weight: 300;
+          }
+        }
+
+        &.serviceOne {
+          .image {
+            background-image: url("https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/06/comelite-architecture-structure-and-interior-design-modern-neoclassical-villa-interior-design-private-houses-archello.1596715458.3455.jpg");
+          }
+
+          &:hover {
+            .image {
+              background-position: center left;
+            }
+          }
+        }
+        &.serviceTwo {
+          .image {
+            background-image: url("https://www.decoraid.com/wp-content/uploads/2021/04/Interior-of-modern-hallway-with-mirror-2500x1667.jpeg");
+          }
+          &:hover {
+            .image {
+              background-position: center left;
+            }
+          }
+        }
+        &.serviceThree {
+          .image {
+            background-image: url("https://archello.s3.eu-central-1.amazonaws.com/images/2020/08/06/comelite-architecture-structure-and-interior-design-modern-neoclassical-villa-interior-design-private-houses-archello.1596715458.3455.jpg");
+          }
+          &:hover {
+            .image {
+              background-position: center right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .serviceSection {
+    width: 100%;
+    .sectionWrapper {
+      max-width: 1100px;
+      margin: auto;
+
+      .services {
+        display: grid;
+
+        .service {
+          height: auto;
+          display: grid;
+          grid-template-columns: none;
+          grid-template-rows: 3fr 5fr;
+          grid-template-areas:
+            "image"
+            "text";
+          .image {
+            grid-area: image;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-size: cover;
+            transition: 1500ms ease-in-out;
+          }
+          .information {
+            grid-area: text;
+            padding: 2rem;
+            .type {
+              font-weight: 700;
+              font-size: 1.5rem;
+              font-family: $fontPlayfair;
+              font-style: italic;
+              margin-bottom: 1.4rem;
+            }
+            .description {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contactSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: $colorBlackish;
+  color: white;
+  font-weight: 300;
+  .sectionWrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .title {
+      grid-column: 1/-1;
+      font-size: 2rem;
+      font-weight: 700;
+      font-family: $fontPlayfair;
+      margin-bottom: 10px;
+    }
+    .message {
+      grid-column: 1/-1;
+      color: $colorGray500;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .contactInformation {
+      .item {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+          "icon type"
+          "icon description";
+        margin-bottom: 1rem;
+        max-width: 400px;
+
+        .icon {
+          grid-area: icon;
+          display: block;
+          align-self: center;
+          justify-self: center;
+        }
+        .type {
+          grid-area: type;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 0.9rem;
+        }
+        .description {
+          grid-area: description;
+          font-weight: 300;
+        }
+      }
+    }
+    .contactForm {
+      position: relative;
+      .item {
+        width: clamp(200px, 80%, 450px);
+        display: grid;
+        margin: auto;
+        margin-bottom: 10px;
+        gap: 3px;
+        .label {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+
+        input,
+        textarea {
+          outline: none;
+          border: none;
+          padding: 10px 20px;
+        }
+
+        input {
+          height: 30px;
+          border-radius: 3px;
+        }
+
+        textarea {
+          border-radius: 5px;
+        }
+      }
+      button {
+        position: relative;
+        padding: 7px 40px;
+        left: 75%;
+        border-radius: 5px;
+        background-color: $colorPrimary;
+        color: $colorWhite;
+        transform: translateX(-100%);
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover {
+          background-color: $colorPrimaryDarken;
+        }
+      }
+
+      .submitMessage {
+        width: clamp(200px, 80%, 450px);
+        margin: auto;
+        margin-bottom: 10px;
+
+        .errors {
+          font-size: 0.85rem;
+          color: pink;
+        }
+        .success {
+          font-size: 0.85rem;
+          color: yellow;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contactSection {
+    .sectionWrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+//

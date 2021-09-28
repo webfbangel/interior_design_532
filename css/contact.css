@@ -1,0 +1,140 @@
+.contactSection {
+  padding: 6rem 0;
+  width: 100%;
+  background-color: #2f3542;
+  color: white;
+  font-weight: 300;
+}
+
+.contactSection .sectionWrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.contactSection .sectionWrapper .title {
+  grid-column: 1/-1;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
+}
+
+.contactSection .sectionWrapper .message {
+  grid-column: 1/-1;
+  color: #8c8c8c;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contactSection .sectionWrapper .contactInformation .item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+      grid-template-areas: "icon type" "icon description";
+  margin-bottom: 1rem;
+  max-width: 400px;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .type {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: type;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.contactSection .sectionWrapper .contactInformation .item .description {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: description;
+  font-weight: 300;
+}
+
+.contactSection .sectionWrapper .contactForm {
+  position: relative;
+}
+
+.contactSection .sectionWrapper .contactForm .item {
+  width: clamp(200px, 80%, 450px);
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  margin-bottom: 10px;
+  gap: 3px;
+}
+
+.contactSection .sectionWrapper .contactForm .item .label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.contactSection .sectionWrapper .contactForm .item input,
+.contactSection .sectionWrapper .contactForm .item textarea {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+.contactSection .sectionWrapper .contactForm .item input {
+  height: 30px;
+  border-radius: 3px;
+}
+
+.contactSection .sectionWrapper .contactForm .item textarea {
+  border-radius: 5px;
+}
+
+.contactSection .sectionWrapper .contactForm button {
+  position: relative;
+  padding: 7px 40px;
+  left: 75%;
+  border-radius: 5px;
+  background-color: #b33939;
+  color: #ffffff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.contactSection .sectionWrapper .contactForm button:hover {
+  background-color: #7d2727;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage {
+  width: clamp(200px, 80%, 450px);
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage .errors {
+  font-size: 0.85rem;
+  color: pink;
+}
+
+.contactSection .sectionWrapper .contactForm .submitMessage .success {
+  font-size: 0.85rem;
+  color: yellow;
+}
+/*# sourceMappingURL=contact.css.map */
