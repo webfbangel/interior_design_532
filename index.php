@@ -231,8 +231,7 @@ if (filter_has_var(INPUT_POST, "submit")) {
     <div class="sectionWrapper">
       <div class="title">Contact us</div>
       <div class="message">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem labore
-        iure qui nihil in!
+        We are here to serve you. Let's get it touch.
       </div>
       <div class="contactInformation">
         <div class="item">
