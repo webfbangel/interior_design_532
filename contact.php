@@ -1,4 +1,15 @@
 <?php
+
+function console_log($output, $with_script_tags = true)
+{
+  $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) .
+    ');';
+  if ($with_script_tags) {
+    $js_code = '<script>' . $js_code . '</script>';
+  }
+  echo $js_code;
+}
+
 // Message vars
 $msg = "";
 $msgClass = "";
@@ -32,6 +43,20 @@ if (filter_has_var(INPUT_POST, "submit")) {
 
       // Aditional headers
       $headers .= "From " . $name . "<" . $email . ">" . "\r\n";
+
+      console_log(
+        "$toEmail",
+        $toEmail
+      );
+      console_log(
+        "$subject",
+        $subject
+      );
+      console_log(
+        "$body",
+        $body
+      );
+      console_log("$headers", $headers);
 
       if (mail($toEmail, $subject, $body, $headers)) {
         $msg = "Thanks, the email was sent";
