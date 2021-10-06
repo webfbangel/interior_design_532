@@ -64,6 +64,8 @@ if (filter_has_var(INPUT_POST, "submit")) {
       } else {
         $msg = "Your email was not sent";
         $msgClass = "errors";
+
+        console_log(mail($toEmail, $subject, $body, $headers))
       }
     }
   } else {
