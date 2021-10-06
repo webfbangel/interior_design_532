@@ -13,8 +13,10 @@ if (filter_has_var(INPUT_POST, "submit")) {
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
       $msg = "Please use a valid email";
-      $msgClass = "error";
+      $msgClass = "errors";
     } else {
+
+
       $toEmail = "julio@fbangel.com";
       $subject = "Contact request From " . $name;
       $body = "
@@ -32,11 +34,11 @@ if (filter_has_var(INPUT_POST, "submit")) {
       $headers .= "From " . $name . "<" . $email . ">" . "\r\n";
 
       if (mail($toEmail, $subject, $body, $headers)) {
-        $msg = "Your email has been sent";
-        $mesgClass = "success";
+        $msg = "Thanks, the email was sent";
+        $msgClass = "success";
       } else {
         $msg = "Your email was not sent";
-        $msgClass = "error";
+        $msgClass = "errors";
       }
     }
   } else {
@@ -145,7 +147,7 @@ if (filter_has_var(INPUT_POST, "submit")) {
             </p>
           </div>
         <?php endif; ?>
-        <button type="submit">Send</button>
+        <button type="submit" name="submit">Send</button>
       </form>
     </div>
   </div>
