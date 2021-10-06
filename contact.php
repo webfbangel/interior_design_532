@@ -39,10 +39,10 @@ if (filter_has_var(INPUT_POST, "submit")) {
 
       // Email headers
       $headers = "MIME-Version: 1.0" . "\r\n";
-      $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\r";
+      $headers .= "Content-Type:text/html;charset=UTF-8" . "\r\n";
 
       // Aditional headers
-      $headers .= "From " . $name . "<" . $email . ">" . "\r\n";
+      $headers .= "From: " . $name . "<" . $email . ">" . "\r\n";
 
       console_log(
         "$toEmail",
